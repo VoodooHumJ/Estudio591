@@ -552,7 +552,7 @@ body.nav-active { overflow: hidden; }
   background-color: transparent;
   padding-block: 40px;
   z-index: 4;
-  border-block-end: 50px solid transparent;
+  border-block-end: 1px solid transparent;
   transition: var(--transition-1);
 }
 
