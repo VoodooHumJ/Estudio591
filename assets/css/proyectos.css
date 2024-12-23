@@ -1,0 +1,206 @@
+@font-face {
+  font-family: Futura;
+  src: url('../fonts/Futura-Book2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+::selection {
+  background-color: #808080;
+  color: #f4f4f4;
+}
+
+:root {
+  --font-primary: Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --primary-color: #f4f4f4;
+  --secondary-color: #808080;
+} 
+
+body {
+  font-family: var(--font-primary);
+  background-color: black;
+}
+
+h1 {
+  
+  font-family: Futura, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+
+}
+body {
+  font-family: Futura, sans-serif;
+  background-color: black;
+}
+
+.projects-section {
+  padding-top: 110px;  
+  padding-bottom: 80px;  
+}
+
+.grid-gallery {
+  font-family: var(--font-primary);
+  margin-top: 40px;  
+}
+
+ 
+@media (max-width: 768px) {
+  .projects-section {
+      padding-top: 100px;
+  }
+}
+
+.project-info h3,
+.lightbox-content,
+.lightbox-details h2,
+.project-specs h3,
+.specs-list {
+    font-family: var(--font-primary);
+}
+
+
+
+
+.grid-gallery {
+    font-family: Futura, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .gallery-item {
+    font-family: Futura, sans-serif;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1;
+    cursor: pointer;
+  }
+  
+  .project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.5s ease;
+  }
+
+  .project-info h3 {
+    font-family: Futura, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  
+  .gallery-item:hover .project-img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+  }
+  
+  .project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+  }
+  
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+  }
+  
+  .lightbox-content {
+    font-family: Futura, sans-serif;
+    display: flex;
+    max-width: 90%;
+    width: 1200px;
+    height: 80vh;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+  }
+  
+  .lightbox-image {
+    flex: 1;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+  .lightbox-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  
+  
+  .lightbox-details {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .close-lightbox {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .grid-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .lightbox-image {
+      max-height: 50vh;
+    }
+    
+    .lightbox-content {
+      flex-direction: column;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+
+.lightbox-details {
+  padding: 20px;
+}
+
+.tech-specs {
+  margin-top: 20px;
+}
+
+.tech-specs dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+}
+
+.tech-specs dt {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.tech-specs dd {
+  margin: 0;
+}
