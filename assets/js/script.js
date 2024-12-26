@@ -186,3 +186,29 @@ function showLightbox(item) {
   techSpecs.style.display = 'block';
   document.querySelector('.lightbox-details').appendChild(techSpecs);
 }
+// Add preloading for images
+window.addEventListener('load', () => {
+    const heroSlides = document.querySelectorAll('.hero-slider .slider-item');
+    let currentSlide = 0;
+    const slideInterval = 5000; // Fixed 5 second interval
+
+    function showSlide(index) {
+        heroSlides.forEach(slide => slide.classList.remove('active'));
+        heroSlides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % heroSlides.length;
+        showSlide(currentSlide);
+    }
+
+    // Preload images
+    heroSlides.forEach(slide => {
+        const img = new Image();
+        img.src = slide.querySelector('img').src;
+    });
+
+    // Start slider with consistent timing
+    showSlide(0);
+    setInterval(nextSlide, slideInterval);
+});

@@ -19,7 +19,7 @@ body {
   
 .main {
     min-height: 100vh;
-    padding-top: 100px; /* Adjust based on your header height */
+    padding-top: 100px;  
     padding-bottom: 50px;
 }
 
@@ -37,8 +37,8 @@ body {
     background: var(--white);
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px; /* Alternative spacing method */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional divider */
+    margin-bottom: 40px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
     padding-bottom: 40px;
 }
 
@@ -46,8 +46,8 @@ body {
     background: var(--white);
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px; /* Alternative spacing method */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional divider */
+    margin-bottom: 40px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
     padding-bottom: 40px;
 }
 
@@ -55,8 +55,8 @@ body {
     background: var(--white);
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px; /* Alternative spacing method */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional divider */
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 40px;
 }
 
@@ -64,8 +64,8 @@ body {
     background: var(--white);
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px; /* Alternative spacing method */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional divider */
+    margin-bottom: 40px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
     padding-bottom: 40px;
 }
 
