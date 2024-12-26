@@ -1,9 +1,7 @@
 @font-face {
   font-family: Futura;
   src: url('../fonts/Futura-Book2.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  
 }
 
 ::selection {
@@ -11,16 +9,23 @@
   color: #f4f4f4;
 }
 
-:root {
-  --font-primary: Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --primary-color: #f4f4f4;
-  --secondary-color: #808080;
-} 
+.title {
+  font-family: 'Futura', sans-serif;
+  font-size: 3.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 
 body {
-  font-family: var(--font-primary);
-  background-color: black;
+  min-height: 100vh;
+  overflow-y: auto;
 }
+
+
+
+
 
 h1 {
   
@@ -29,10 +34,7 @@ h1 {
   font-weight: 700;
 
 }
-body {
-  font-family: Futura, sans-serif;
-  background-color: black;
-}
+
 
 .projects-section {
   padding-top: 150px;  
