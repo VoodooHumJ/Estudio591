@@ -19,15 +19,17 @@ body {
   
 .main {
     min-height: 100vh;
-    padding-top: 100px;  
+    padding-top: 150px;  
     padding-bottom: 50px;
 }
 
 .news-container {
+    margin-top: 50px;  
     padding: 40px 20px;
     max-width: 1200px;
-    margin: 0 auto;
-    min-height: calc(100vh - 200px);
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(100vh - 250px);  
     display: flex;
     flex-direction: column;
     gap: 40px;

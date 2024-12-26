@@ -35,7 +35,7 @@ body {
 }
 
 .projects-section {
-  padding-top: 110px;  
+  padding-top: 150px;  
   padding-bottom: 80px;  
 }
 
@@ -59,7 +59,22 @@ body {
     font-family: var(--font-primary);
 }
 
+.projects-section {
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 80px;
+  z-index: 1;
+}
 
+.header {
+  position: dynamic;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  z-index: 1001;
+}
 
 
 .grid-gallery {
