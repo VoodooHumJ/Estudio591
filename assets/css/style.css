@@ -1,6 +1,11 @@
 @font-face {
   font-family: 'Futura';
-  src: url('assets/fonts/Futura-Book2.ttf') format('truetype');
+  src: url('../fonts/Futura-Book.ttf') format('truetype'),
+       url('../fonts/Futura-Book.woff2') format('woff2'),
+       url('../fonts/Futura-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 ::selection {
@@ -40,13 +45,16 @@
   --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%,  transparent 66.66% 75%);
   --gradient-1: linear-gradient(to top,hsla(0, 0%, 0%, 0.9),hsla(0, 0%, 0%, 0.7),transparent);
 
+  --font-primary: 'Futura', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   
-  
-  body {
-    font-family: 'Futura', sans-serif;
-    background-color: #8080807a;
-  }
+  * {
+    font-family: var(--font-primary);
+}
+
+body {
+    font-family: var(--font-primary);
+}
   /* font-family */
   
 
@@ -177,9 +185,9 @@ html {
 }
 
 body {
-  background-color: var(--eerie-black-1);
+  background-color: #80808033;
   color: black;
-  font-family: var(--fontFamily-dm_sans);
+   
   font-size: var(--fontSize-body-4);
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
@@ -458,7 +466,7 @@ body.nav-active { overflow: hidden; }
 
 .preload {
   position: fixed;
-  top: 0;
+  top: -110px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -467,7 +475,7 @@ body.nav-active { overflow: hidden; }
   display: grid;
   place-content: center;
   justify-items: center;
-  transition: opacity 3s ease-in-out;
+  transition: opacity 5s ease-in-out;
 }
 
 .preload-image {
@@ -632,7 +640,7 @@ nav a.active {
 
 .submenu li {
   display: inline-block;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid transparent;
 }
 
 .submenu li:last-child {

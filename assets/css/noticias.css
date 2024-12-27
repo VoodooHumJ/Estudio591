@@ -1,6 +1,11 @@
 @font-face {
     font-family: 'Futura';
-    src: url('assets/fonts/Futura-Book2.ttf') format('truetype');
+    src: url('../fonts/Futura-Book.ttf') format('truetype'),
+         url('../fonts/Futura-Book.woff2') format('woff2'),
+         url('../fonts/Futura-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 .title {
@@ -10,9 +15,18 @@
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-  
+
+:root {
+--font-primary: 'Futura', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+    font-family: var(--font-primary);
+}
 
 body {
+    font-family: var(--font-primary);
+    background-color: #80808033;
     min-height: 100vh;
     overflow-y: auto;
 }

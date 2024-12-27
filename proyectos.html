@@ -107,7 +107,7 @@
           </li>
           <li class="separator2">|</li>
           <li class="navbar-item has-dropdown">
-            <a href="#" class="navbar-link">Estudio591</a>
+            <a href="" class="navbar-link">Estudio591</a>
             <ul class="submenu">
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Filosofía</a></li>
@@ -160,41 +160,82 @@
   <main>
     <section class="projects-section">
       <div class="container">
+        <!-- Add Filter Buttons -->
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="proyectos">Proyectos</button>
+          <button class="filter-btn" data-filter="concursos">Concursos</button>
+          <button class="filter-btn" data-filter="premios y menciones">Premios y menciones</button>
+        </div>
+
         <div class="grid-gallery">
-          
-          <div class="gallery-item">
+          <div class="gallery-item" data-category="proyectos">
             <img src="./assets/images/proyectos/proyecto1.jpg" alt="Project 1" class="project-img">
             <div class="project-info">
               <h3>Proyecto Casa RQP</h3>
-              
             </div>
           </div>
 
-          <div class="gallery-item">
-            <img src="./assets/images/proyectos/proyecto2.jpg" alt="Project 1" class="project-img">
+          <div class="gallery-item" data-category="concursos">
+            <img src="./assets/images/proyectos/proyecto2.jpg" alt="Project 2" class="project-img">
             <div class="project-info">
               <h3>Proyecto K</h3>
             </div>
           </div>
 
-          <div class="gallery-item">
+          <div class="gallery-item" data-category="premios y menciones">
             <img src="./assets/images/proyectos/proyecto3.jpg" alt="Project 1" class="project-img">
             <div class="project-info">
               <h3>Proyecto REVIT</h3>
             </div>
           </div>
 
-          <div class="gallery-item">
+          <div class="gallery-item" data-category="proyectos">
             <img src="./assets/images/proyectos/proyecto4.jpg" alt="Project 1" class="project-img">
             <div class="project-info">
               <h3>Proyecto 456</h3>
             </div>
           </div>
 
-          <div class="gallery-item">
+          <div class="gallery-item" data-category="concursos">
             <img src="./assets/images/proyectos/proyecto5.jpg" alt="Project 1" class="project-img">
             <div class="project-info">
               <h3>Proyecto Familia Perez</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="premios y menciones">
+            <img src="./assets/images/proyectos/proyecto1.jpg" alt="Project 1" class="project-img">
+            <div class="project-info">
+              <h3>Proyecto Casa RQP</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="concursos">
+            <img src="./assets/images/proyectos/proyecto2.jpg" alt="Project 2" class="project-img">
+            <div class="project-info">
+              <h3>Proyecto R</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="premios y menciones">
+            <img src="./assets/images/proyectos/proyecto3.jpg" alt="Project 1" class="project-img">
+            <div class="project-info">
+              <h3>Proyecto ARBOL3</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="proyectos">
+            <img src="./assets/images/proyectos/proyecto4.jpg" alt="Project 1" class="project-img">
+            <div class="project-info">
+              <h3>Proyecto 4Q</h3>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="concursos">
+            <img src="./assets/images/proyectos/proyecto5.jpg" alt="Project 1" class="project-img">
+            <div class="project-info">
+              <h3>Proyecto Familia Gutierrez</h3>
             </div>
           </div>
 
@@ -208,21 +249,40 @@
   
     <div class="lightbox" id="lightbox">
       <span class="close-lightbox">&times;</span>
+      
       <div class="lightbox-content">
-        <div class="lightbox-image">
-          <img src="" alt="" id="lightbox-img">
-        </div>
-        <div class="lightbox-details">
-          <h2 class="project-title"></h2>
-          <div class="project-specs">
-            <h3>Especificaciones Técnicas</h3>
-            <ul class="specs-list">
-            </ul>
+          <div class="lightbox-left">
+              <div class="lightbox-main-image">
+                  <img src="" alt="" id="lightbox-img">
+                  <button class="nav-btn prev">&lt;</button>
+                  <button class="nav-btn next">&gt;</button>
+              </div>
+              
+              <div class="lightbox-thumbnails">
+                  <!-- Thumbnails will be dynamically added here -->
+              </div>
           </div>
-        </div>
+  
+          <div class="lightbox-details">
+              <h2 class="project-title"></h2>
+              <div class="project-description">
+                  <p class="description-text"></p>
+              </div>
+              <div class="project-specs">
+                  <h3>Especificaciones Técnicas</h3>
+                  <ul class="specs-list">
+                      <li><strong>Área:</strong> <span class="area"></span></li>
+                      <li><strong>Ubicación:</strong> <span class="location"></span></li>
+                      <li><strong>Año:</strong> <span class="year"></span></li>
+                      <li><strong>Estado:</strong> <span class="status"></span></li>
+                  </ul>
+              </div>
+          </div>
       </div>
-    </div>
+  </div>
   </main>
+
+  
 
   
   
