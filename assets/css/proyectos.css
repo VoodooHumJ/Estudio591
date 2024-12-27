@@ -231,12 +231,13 @@ h1 {
   color: #333;
   cursor: pointer;
   font-family: var(--font-primary);
-  font-size: 16px;
+  font-size: 12px;
   transition: all 0.3s ease;
 }
 
 .filter-btn.active {
-  color: white;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
    
 }
 

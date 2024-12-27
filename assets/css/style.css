@@ -557,14 +557,17 @@ body.nav-active { overflow: hidden; }
   transition: 0.3s ease-in-out;
 }
 
+
+
 .header.active {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(90px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   padding-block: 20px;
   transition: 0.3s ease-in-out;
+  
 }
 
 .header.hide {
@@ -596,23 +599,51 @@ body.nav-active { overflow: hidden; }
 
 nav a {
   color: #000000;
-  
+   
   transition: color 0.3s ease;
   font-weight: 400;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-left: 20px;
+  transition: transform 0.3s ease;
+}
+
+.logo-container img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+.logo-container:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+      margin-left: 10px;
+  }
+  .logo-container img {
+      max-width: 200px;
+  }
 }
 
 nav a:hover,
 nav a.active {
     color: rgb(0, 0, 0);
-    font-weight: 800;
+    font-weight: bolder;
+    
 }
 
 .submenu {
-  font-size: 16px;
+  font-size: 12px;
   
   position: absolute;
-  top: 70%;
-  left: 44%;
+  top: 60%;
+  left: 45%;
   transform: translateX(-50%) translateY(5px);
   
   display: flex;
@@ -622,7 +653,7 @@ nav a.active {
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 1000;
-  min-width: 350px;
+  min-width: 250px;
   justify-content: space-around;
   padding: 10px 20px;
 }
@@ -1260,6 +1291,7 @@ nav a.active {
     transform: scaleX(1);
     opacity: 1;
   }
+  
 
   .header .btn { margin-inline-start: 0; }
 
