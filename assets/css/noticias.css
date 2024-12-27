@@ -26,7 +26,7 @@
 
 body {
     font-family: var(--font-primary);
-    background-color: #80808033;
+    background-color: #f3f3f3;
     min-height: 100vh;
     overflow-y: auto;
 }
