@@ -210,7 +210,7 @@ window.addEventListener("mousemove", function (event) {
   x = (event.clientX / window.innerWidth * 10) - 5;
   y = (event.clientY / window.innerHeight * 10) - 5;
 
-  // reverse the number eg. 20 -> -20, -5 -> 5
+   
   x = x - (x * 2);
   y = y - (y * 2);
 
@@ -227,11 +227,11 @@ function showLightbox(item) {
   techSpecs.style.display = 'block';
   document.querySelector('.lightbox-details').appendChild(techSpecs);
 }
-// Add preloading for images
+ 
 window.addEventListener('load', () => {
     const heroSlides = document.querySelectorAll('.hero-slider .slider-item');
     let currentSlide = 0;
-    const slideInterval = 5000; // Fixed 5 second interval
+    const slideInterval = 5000;  
 
     function showSlide(index) {
         heroSlides.forEach(slide => slide.classList.remove('active'));
@@ -243,13 +243,13 @@ window.addEventListener('load', () => {
         showSlide(currentSlide);
     }
 
-    // Preload images
+     
     heroSlides.forEach(slide => {
         const img = new Image();
         img.src = slide.querySelector('img').src;
     });
 
-    // Start slider with consistent timing
+     
     showSlide(0);
     setInterval(nextSlide, slideInterval);
 });
@@ -259,17 +259,17 @@ function updateMenuColors() {
   const bodyStyle = window.getComputedStyle(document.body);
   const bgColor = bodyStyle.backgroundColor;
 
-  // Convertir el color RGB a un valor de luminancia
+   
   const [r, g, b] = bgColor.match(/\d+/g).map(Number);
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
 
-  // Cambiar el color de texto según la luminancia
+   
   const textColor = luminance > 0.5 ? "black" : "white";
   document.documentElement.style.setProperty('--menu-text-color', textColor);
 }
 
 updateMenuColors();
-// O actualizar dinámicamente al cambiar fondo
+ 
 document.body.addEventListener('click', () => {
   document.body.style.backgroundColor =
     `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;

@@ -17,9 +17,7 @@
 
 :root {
 
-  /**
-   * COLORS
-   */
+   
 
   --gold-crayola: hsl(38, 61%, 73%);
   --quick-silver: hsla(0, 0%, 65%, 1);
@@ -38,9 +36,7 @@
   --black-alpha-80: hsla(0, 0%, 0%, 0.8);
   --black-alpha-15: hsla(0, 0%, 0%, 0.15);
 
-  /**
-   * GRADIENT COLOR
-   */
+   
 
   --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%,  transparent 66.66% 75%);
   --gradient-1: linear-gradient(to top,hsla(0, 0%, 0%, 0.9),hsla(0, 0%, 0%, 0.7),transparent);
@@ -55,10 +51,7 @@
 body {
     font-family: var(--font-primary);
 }
-  /* font-family */
-  
-
-  /* font-size */
+   
   --fontSize-display-1: calc(1.3rem + 6.7vw);
   --fontSize-headline-1: calc(2rem + 2.5vw);
   --fontSize-headline-2: calc(1.3rem + 2.4vw);
@@ -73,11 +66,11 @@ body {
   --fontSize-label-1: 1.4rem;
   --fontSize-label-2: 1.2rem;
 
-  /* font-weight */
+   
   --weight-regular: 400;
   --weight-bold: 480;
 
-  /* line-height */
+  
   --lineHeight-1: 1em;
   --lineHeight-2: 1.2em;
   --lineHeight-3: 1.5em;
@@ -85,36 +78,24 @@ body {
   --lineHeight-5: 1.85em;
   --lineHeight-6: 1.4em;
 
-  /* letter-spacing */
+   
   --letterSpacing-1: 0.15em;
   --letterSpacing-2: 0.4em;
   --letterSpacing-3: 0.2em;
   --letterSpacing-4: 0.3em;
   --letterSpacing-5: 3px;
 
-  /**
-   * SPACING
-   */
-
+   
   --section-space: 70px;
 
-  /**
-   * SHADOW
-   */
-
+   
   --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
 
-  /**
-   * BORDER RADIUS
-   */
-
+   
   --radius-24: 24px;
   --radius-circle: 50%;
 
-  /**
-   * TRANSITION
-   */
-
+   
   --transition-1: 250ms ease;
   --transition-2: 500ms ease;
   --transition-3: 600ms ease;
@@ -128,9 +109,7 @@ body {
 
 
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
+ 
 
 *,
 *::before,
@@ -212,9 +191,7 @@ body.nav-active { overflow: hidden; }
 
 
 
-/*-----------------------------------*\
-  #TYPOGRAPHY
-\*-----------------------------------*/
+ 
 
 .display-1,
 .headline-1,
@@ -273,9 +250,7 @@ body.nav-active { overflow: hidden; }
 
 
 
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
+ 
 
 .container { padding-inline: 16px; }
 
@@ -461,9 +436,7 @@ body.nav-active { overflow: hidden; }
 
 
 
-/*-----------------------------------*\
-  #PRELOAD
-\*-----------------------------------*/
+ 
 
 .preload {
   position: fixed;
@@ -536,15 +509,11 @@ body.nav-active { overflow: hidden; }
 
 
 
-/*-----------------------------------*\
-  #TOPBAR
-\*-----------------------------------*/
+ 
 
 .topbar { display: none; }
 
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
+ 
 
 .header .btn { display: none; }
 
@@ -810,9 +779,7 @@ nav a.active {
 
 
 
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
+ 
 
 .hero .slider-btn { display: none; }
 
@@ -974,14 +941,11 @@ nav a.active {
 
 
 
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
+ 
 
 /**
  * responsive for larger than 575px screen
- */
-
+ 
 @media (min-width: 575px) {
 
   /**
@@ -990,19 +954,14 @@ nav a.active {
 
   :root {
 
-    /**
-     * typography
-     */
-
+    
     --fontSize-body-2: 2rem;
 
   }
 
 
 
-  /**
-   * REUSED STYLE
-   */
+   
 
   :is(.service, .about) .section-text {
     max-width: 420px;
@@ -1013,10 +972,7 @@ nav a.active {
 
 
 
-  /**
-   * TOPBAR
-   */
-
+   
   .topbar {
     display: block;
     position: fixed;
@@ -1063,10 +1019,7 @@ nav a.active {
 
 
 
-  /**
-   * HEADER
-   */
-
+  
   .header { top: 51px; }
 
   .header.active { top: 0; }
