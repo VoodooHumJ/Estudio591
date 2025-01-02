@@ -346,4 +346,12 @@ h1 {
   .lightbox-left {
       height: 60%;
   }
+
+  .filter-container {
+    display: none;
+  }
+
+  .grid-gallery {
+    margin-top: 20px;
+  }
 }

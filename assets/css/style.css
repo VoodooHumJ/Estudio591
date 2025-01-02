@@ -1286,3 +1286,33 @@ nav a.active {
   .navbar { margin-inline: auto; }
 
 }
+
+
+@media (max-width: 768px) {
+  .navbar-item.has-dropdown .submenu {
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    background: transparent;
+    box-shadow: none;
+    padding-left: 20px;
+    margin-top: 10px;
+    transform: none;
+  }
+
+  .navbar-item.has-dropdown:hover .submenu {
+    display: block;
+    animation: none;
+  }
+
+  .submenu li {
+    margin: 10px 0;
+  }
+
+  .submenu a {
+    color: black;
+    font-size: var(--fontSize-7);
+    padding: 5px 0;
+  }
+}
