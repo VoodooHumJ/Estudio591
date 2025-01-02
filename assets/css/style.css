@@ -1015,7 +1015,7 @@ nav a.active {
 
   .topbar .link { transition: var(--transition-1); }
 
-  .topbar .link:is(:hover, :focus-visible) { color: var(--gold-crayola); }
+  .topbar .link:is(:hover, :focus-visible) { color: black; }
 
 
 
@@ -1076,7 +1076,7 @@ nav a.active {
     display: grid;
     position: absolute;
     z-index: 1;
-    color: var(--gold-crayola);
+    color: black;
     font-size: 2.4rem;
     border: 1px solid var(--gold-crayola);
     width: 45px;
@@ -1289,6 +1289,52 @@ nav a.active {
 
 
 @media (max-width: 768px) {
+  .nav-open-btn {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .nav-open-btn .line {
+    width: 25px;
+    height: 2px;
+    background-color: var(--black);
+    margin: 5px 0;
+    transition: var(--transition-1);
+  }
+
+  .nav-open-btn:hover .line {
+    background-color: var(--gold-crayola);
+  }
+
+  .nav-open-btn:active .line {
+    background-color: var(--gold-crayola);
+  }
+  .navbar {
+    position: fixed;
+    padding-top: 30px;
+    background-color: white;
+    top: 0;
+    left: -360px;
+    bottom: 0;
+    max-width: 360px;
+    width: 100%;
+    padding-inline: 30px;
+    padding-block-end: 50px;
+    overflow-y: auto;
+    visibility: hidden;
+    z-index: 2;
+    transition: var(--transition-2);
+  }
+
+  .navbar.logo-container {
+    margin-bottom: 10;
+  }
+  
+
+  
+
   .navbar-item.has-dropdown .submenu {
     position: static;
     display: none;
@@ -1308,6 +1354,8 @@ nav a.active {
 
   .submenu li {
     margin: 10px 0;
+    list-style: none;
+     
   }
 
   .submenu a {
@@ -1325,57 +1373,12 @@ nav a.active {
 
   .header {
     margin-top: 0;
-    padding-top: 50px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+    padding-top: 0px;
+    top: 4%;
+     
   }
 
-  .main {
-    margin-top: 80px;  
-  }
-
-  @media (max-width: 768px) {
-    .navbar-item.has-dropdown {
-      flex-direction: column;
-      align-items: flex-start;
-    }
   
-    .submenu {
-      position: static;
-      display: block;
-      width: 100%;
-      background: transparent;
-      box-shadow: none;
-      padding-left: 40px;
-      margin-top: 0;
-    }
-  
-    .submenu li {
-      padding: 8px 0;
-      margin: 0;
-    }
-  
-    .submenu a {
-      color: var(--black);
-      font-size: var(--fontSize-7);
-      font-weight: 400;
-      transition: none;
-    }
-  
-    .submenu a:hover,
-    .submenu a:active {
-      color: var(--black);
-      font-weight: 700;
-      background: none;
-    }
-  
-    .navbar-item.has-dropdown:hover .submenu {
-      transform: none;
-      opacity: 1;
-    }
-  }
 
 
 }
