@@ -1325,5 +1325,57 @@ nav a.active {
 
   .header {
     margin-top: 0;
+    padding-top: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
   }
+
+  .main {
+    margin-top: 80px;  
+  }
+
+  @media (max-width: 768px) {
+    .navbar-item.has-dropdown {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .submenu {
+      position: static;
+      display: block;
+      width: 100%;
+      background: transparent;
+      box-shadow: none;
+      padding-left: 40px;
+      margin-top: 0;
+    }
+  
+    .submenu li {
+      padding: 8px 0;
+      margin: 0;
+    }
+  
+    .submenu a {
+      color: var(--black);
+      font-size: var(--fontSize-7);
+      font-weight: 400;
+      transition: none;
+    }
+  
+    .submenu a:hover,
+    .submenu a:active {
+      color: var(--black);
+      font-weight: 700;
+      background: none;
+    }
+  
+    .navbar-item.has-dropdown:hover .submenu {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+
 }
