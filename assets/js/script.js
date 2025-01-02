@@ -120,6 +120,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const newsCards = document.querySelectorAll('.news-card');
+
+  filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+          filterBtns.forEach(btn => btn.classList.remove('active'));
+          btn.classList.add('active');
+          
+          const filter = btn.getAttribute('data-filter');
+          
+          newsCards.forEach(card => {
+              if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                  card.style.display = 'block';
+              } else {
+                  card.style.display = 'none';
+              }
+          });
+      });
+  });
+});
  
 const heroSlider = document.querySelector("[data-hero-slider]");
 const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
@@ -147,7 +168,7 @@ const slideNext = function () {
 let autoSlideInterval;
 
 const startAutoSlide = function () {
-  autoSlideInterval = setInterval(slideNext, 8000); // Cambia la imagen cada 10 segundos
+  autoSlideInterval = setInterval(slideNext, 8000);  
 }
 
 const stopAutoSlide = function () {
@@ -232,3 +253,27 @@ window.addEventListener('load', () => {
     showSlide(0);
     setInterval(nextSlide, slideInterval);
 });
+
+
+function updateMenuColors() {
+  const bodyStyle = window.getComputedStyle(document.body);
+  const bgColor = bodyStyle.backgroundColor;
+
+  // Convertir el color RGB a un valor de luminancia
+  const [r, g, b] = bgColor.match(/\d+/g).map(Number);
+  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+  // Cambiar el color de texto según la luminancia
+  const textColor = luminance > 0.5 ? "black" : "white";
+  document.documentElement.style.setProperty('--menu-text-color', textColor);
+}
+
+updateMenuColors();
+// O actualizar dinámicamente al cambiar fondo
+document.body.addEventListener('click', () => {
+  document.body.style.backgroundColor =
+    `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+  updateMenuColors();
+});
+
+
