@@ -1316,3 +1316,14 @@ nav a.active {
     padding: 5px 0;
   }
 }
+
+
+@media (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+
+  .header {
+    margin-top: 0;
+  }
+}
