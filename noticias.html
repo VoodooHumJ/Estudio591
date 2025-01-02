@@ -161,22 +161,21 @@
       <h1 class="title"></h1>
     </div>
     <div class="filter-container">
-      <button class="filter-btn active" data-filter="all">Todos</button>
-      <button class="filter-btn" data-filter="articulos">Artículos</button>
-      <button class="filter-btn" data-filter="entrevistas">Entrevistas</button>
-      <button class="filter-btn" data-filter="opinion">Opinión</button>
-      <button class="filter-btn" data-filter="actualidad">Actualidad</button>
-      <button class="filter-btn" data-filter="sostenibilidad">Sostenibilidad</button>
-      <button class="filter-btn" data-filter="tendencias">Tendencias</button>
+      <button class="filter-btn active" data-filter="all">TODOS</button>
+      <button class="filter-btn" data-filter="articulos">ARTÍCULOS</button>
+      <button class="filter-btn" data-filter="entrevistas">ENTREVISTAS</button>
+      <button class="filter-btn" data-filter="opinion">OPINIÓN</button>
+      <button class="filter-btn" data-filter="actualidad">ACTUALIDAD</button>
+      
     </div>
   
     <article class="news-container">
        
       <div class="news-card" data-category="articulos">
-          <div class="news-image">
-              <img src="./assets/images/noticias/news-1.jpg" alt="Noticia 1">
-          </div>
-          <div class="news-content">
+        <div class="news-image">
+          <img src="./assets/images/noticias/news-1.jpg" alt="Noticia 1">
+        </div>
+        <div class="news-content">
           <span class="news-category">Artículos</span>
           <h2 class="news-title">Título de la Noticia</h2>
           <h3 class="news-subtitle">Subtítulo de la noticia</h3>
@@ -200,26 +199,122 @@
           </button>
         </div>
       </div>
-
-
       
+
+      <div class="news-card" data-category="entrevistas">
+        <div class="news-image">
+          <img src="./assets/images/noticias/news-2.jpg" alt="Noticia 2">
+        </div>
+        <div class="news-content">
+          <span class="news-category">Entrevistas</span>
+          <h2 class="news-title">Título de la Noticia</h2>
+          <h3 class="news-subtitle">Subtítulo de la noticia</h3>
+          <div class="news-author">
+            <img src="./assets/images/AUTOR/author-1.jpEg" alt="Autor" class="author-image">
+            <div class="author-info">
+              <p class="author-name">Arq. Ismael Carvajal Vogtschmidt</p>
+              <p class="news-date">Enero 15, 2024</p>
+            </div>
+          </div>
+          <div class="news-preview">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+          </div>
+          <div class="news-full" id="fullContent2" style="display: none;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+  
+          <button class="btn read-more-btn" onclick="toggleContent('2')">
+            Leer más...
+          </button>
+        </div>
+      </div>
+
+      <div class="news-card" data-category="opinion">
+        <div class="news-image">
+          <img src="./assets/images/noticias/news-3.jpg" alt="Noticia 1">
+        </div>
+        <div class="news-content">
+          <span class="news-category">Opinión</span>
+          <h2 class="news-title">Título de la Noticia</h2>
+          <h3 class="news-subtitle">Subtítulo de la noticia</h3>
+          <div class="news-author">
+            <img src="./assets/images/AUTOR/author-1.jpEg" alt="Autor" class="author-image">
+            <div class="author-info">
+              <p class="author-name">Arq. Ismael Carvajal Vogtschmidt</p>
+              <p class="news-date">Enero 15, 2024</p>
+            </div>
+          </div>
+          <div class="news-preview">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+          </div>
+          <div class="news-full" id="fullContent3" style="display: none;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+  
+          <button class="btn read-more-btn" onclick="toggleContent('3')">
+            Leer más...
+          </button>
+        </div>
+      </div>
+
+      <div class="news-card" data-category="actualidad">
+        <div class="news-image">
+          <img src="./assets/images/noticias/news-4.jpg" alt="Noticia 1">
+        </div>
+        <div class="news-content">
+          <span class="news-category">Actualidad</span>
+          <h2 class="news-title">Título de la Noticia</h2>
+          <h3 class="news-subtitle">Subtítulo de la noticia</h3>
+          <div class="news-author">
+            <img src="./assets/images/AUTOR/author-1.jpEg" alt="Autor" class="author-image">
+            <div class="author-info">
+              <p class="author-name">Arq. Ismael Carvajal Vogtschmidt</p>
+              <p class="news-date">Enero 15, 2024</p>
+            </div>
+          </div>
+          <div class="news-preview">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+          </div>
+          <div class="news-full" id="fullContent4" style="display: none;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+  
+          <button class="btn read-more-btn" onclick="toggleContent('4')">
+            Leer más...
+          </button>
+        </div>
+      </div>
+
+
+
+
     </article>
   </main>
   
   <script>
     function toggleContent(id) {
-      const fullContent = document.getElementById('fullContent' + id);
-      const button = fullContent.nextElementSibling;
-      
-      if (fullContent.style.display === 'none') {
-        fullContent.style.display = 'block';
-        button.textContent = 'Leer menos';
-      } else {
-        fullContent.style.display = 'none';
-        button.textContent = 'Leer más';
-      }
+        const fullContent = document.getElementById(`fullContent${id}`);
+        const preview = fullContent.previousElementSibling;
+        const button = fullContent.nextElementSibling;
+        
+        if (fullContent.style.display === 'none') {
+            // Show full content
+            fullContent.style.display = 'block';
+            preview.style.display = 'none';
+            button.textContent = 'Leer menos...';
+        } else {
+            // Hide full content
+            fullContent.style.display = 'none';
+            preview.style.display = 'block';
+            button.textContent = 'Leer más...';
+        }
     }
   </script>
+    
+    
   
    
 
