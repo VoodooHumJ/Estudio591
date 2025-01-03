@@ -9,7 +9,7 @@
 }
 
 ::selection {
-  background-color: #808080;
+  background-color: transparent;
   color: #f4f4f4;
 }
 
@@ -516,7 +516,7 @@ body.nav-active { overflow: hidden; }
   position: absolute;
   background: transparent;
   backdrop-filter: blur(90px);
-  -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(1px);
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   padding-block: 20px;
@@ -799,7 +799,9 @@ nav a.active {
 .hero {
   
   filter: grayscale(100%);
- 
+  
+  transition: var(--transition-1);
+
   position: relative;
   padding-block: 120px;
   min-height: 100vh;
@@ -859,7 +861,7 @@ nav a.active {
 }
 
 .hero .slider-item.active .slider-bg {
-  animation: smoothScale 7s linear forwards;
+  animation: smoothScale 10s linear forwards;
 }
 
 @keyframes smoothScale {
