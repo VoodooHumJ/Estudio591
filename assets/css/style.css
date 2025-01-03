@@ -511,7 +511,18 @@ body.nav-active { overflow: hidden; }
 
  
 
-.topbar { display: none; }
+.topbar { 
+  display: none; 
+  position: absolute;
+  background: transparent;
+  backdrop-filter: blur(90px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding-block: 20px;
+  transition: 0.3s ease-in-out;
+}
+
 
  
 
@@ -523,6 +534,7 @@ body.nav-active { overflow: hidden; }
   left: 0;
   width: 100%;
   background-color: transparent;
+
   padding-block: 40px;
   z-index: 4;
   border-block-end: 1px solid transparent;
@@ -538,7 +550,7 @@ body.nav-active { overflow: hidden; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   padding-block: 20px;
-  transition: 0.3s ease-in-out;
+  transition: 0,1s ease-in-out;
   
 }
 
@@ -572,7 +584,7 @@ body.nav-active { overflow: hidden; }
 nav a {
   color: #000000;
    
-  transition: color 0.3s ease;
+  transition: color 0.1s ease;
   font-weight: 400;
 }
 
@@ -662,6 +674,7 @@ nav a.active {
 .navbar {
   position: fixed;
   background-color: white;
+ 
   top: 0;
   left: -360px;
   bottom: 0;
@@ -699,7 +712,7 @@ nav a.active {
 
 
 .navbar-list {
-  border-block-end: 1px solid var(--white-alpha-20);
+  border-block-end: 0px solid var(--white-alpha-20);
   margin-block-end: 100px;
 }
 
@@ -784,7 +797,9 @@ nav a.active {
 .hero .slider-btn { display: none; }
 
 .hero {
+  
   filter: grayscale(100%);
+ 
   position: relative;
   padding-block: 120px;
   min-height: 100vh;
@@ -981,7 +996,7 @@ nav a.active {
     width: 100%;
     padding-block: 10px;
     padding-inline: 20px;
-    border-block-end: 1px solid var(--white-alpha-20);
+    border-block-end: 0px solid var(--white-alpha-20);
     z-index: 4;
     transition: var(--transition-1);
   }
